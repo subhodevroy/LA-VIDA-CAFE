@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Insert title here</title>
+
+</head>
+<script >
+function sum()
+{
+	var a,b,c;
+	a=parseInt(document.getElementById("n1").value);
+	b=parseInt(document.getElementById("n2").value);
+	c=a+b;
+	document.write("the sum is" +c);
+	}
+	function validateFirstName(obj){
+		var name=obj.value;
+		var check=0;
+		for(var i=0;i<name.length;i++)
+		{
+			if((name.charCodeAt(i)>=65 && name.charCodeAt(i)<=90) || 
+					(name.charCodeAt(i)>=97 && name.charCodeAt(i)<=122))
+				{
+				++check;
+				}
+		
+	}
+	if(check===name.length){
+		document.getElementById("firstname").innerHTML="";
+	}else{
+		document.getElementById("firstname").innerHTML="name should contain alphabets";
+		document.getElementById("firstname").style.color="red";
+	}
+	}
+	
+	
+	function validateContact(obj){
+		var contact=obj.value;
+		var len=contact.length;
+		var check=0;
+		if(len==10){
+		for(var i=0;i<len;i++)
+			{
+			if((contact.charCodeAt(i)>=48 && contact.charCodeAt(i)<=57))
+			{
+				++check;
+			}}}
+			if(len==check){
+				document.getElementById("contact").innerHTML="";
+			}
+			else
+				{
+				document.getElementById("contact").innerHTML="Invalid contact! please try again";
+				document.getElementById("contact").style.color="red";
+				}
+			}
+	
+</script>
+
+<style>
+
+p{ line-height: 1em; }
+h1, h2, h3, h4{
+    color: black;
+	font-weight: normal;
+	line-height: 1.1em;
+	margin: 0 0 .5em 0;
+}
+h1{ font-size: 5em; }
+h2{ font-size: 1.5em; }
+a{
+	color: black;
+	text-decoration: none;
+}
+	a:hover,
+	a:active{ text-decoration: underline; }
+
+td
+{
+color:black;
+font-size:20px;
+font-style:italic;
+}
+table
+{
+border:2px solid;
+border-color:black;
+}
+
+body{
+background-color:cyan;
+background-image:url("lavidacafe3.jpg");
+ background-size: 2000px 1500px;
+    background-repeat: no-repeat;
+ font-family: arial; font-size: 80%; line-height: 1.2em; width: 100%; margin: 0; 
+}
+
+.n2
+{
+height:300px;
+width:500px;
+}
+#page{ margin: 20px; }
+#logo{
+	width: 35%;
+	margin-top: 5px;
+	font-family: georgia;
+	display: inline-block;
+}
+#nav{
+	width: 60%;
+	display: inline-block;
+	text-align: right;
+	float: right;
+}
+	#nav ul{}
+		#nav ul li{
+			display: inline-block;
+			height: 62px;
+		}
+			#nav ul li a{
+				padding: 20px;
+				background: orange;
+				color: white;
+			}
+			#nav ul li a:hover{
+				background-color: #ffb424;
+				box-shadow: 0px 1px 1px #666;
+			}
+			#nav ul li a:active{ background-color: #ff8f00; }
+
+#content{
+	margin: 30px 0;
+	background: white;
+	padding: 20px;
+	clear: both;
+}
+#footer{
+	border-bottom: 1px #ccc solid;
+	margin-bottom: 10px;
+}
+	#footer p{
+		text-align: right;
+		text-transform: uppercase;
+		font-size: 80%;
+		color: grey;
+	}
+#content,
+ul li a{ box-shadow: 0px 1px 1px #999; }
+	</style>
+<body>
+<form method="POST" action="Register.php">
+	<div align="center" id="page">
+	<center>
+		<div  id="logo">
+			<h1 style="color:orange;">La Vida Cafe</h1>
+		
+<a href="http://www.google.com"><img alt="image not found" src="lavidacafe2.jpg"height="120px"width="200px"></a>
+		</div>
+		</center>
+		<div id="nav">
+			<ul>
+				<li><a href="#/home.html">Home</a></li>
+				<li><a href="#/about.html">About</a></li>
+				<li><a href="#/contact.html">Contact</a></li>
+			</ul>	
+		</div>
+		<div id="content">
+			<h2>ABOUT US</h2>
+			<p>
+				Restaurant is a place for simplicity. Good food, good beer, and good service. Simple is the name of the game, and we are good at finding it in all the right places, even in your dining experience. 
+			</p>
+			<p> 
+				We are a small group from Webtech labs, Kolkata who make simple food possible. Come join us and see what simplicity tastes like. </p>
+		</div>
+		
+		<div id="footer">
+		
+			<p>
+				<a align="center"; font-size= 20em;style="color:black"><mark>Be Our Guest:</mark></a> <a align="center";font-size= 20em; style="color:black;"><mark>Sign up</mark></a>
+			</p>
+			
+		</div>
+	
+	</div>
+	
+<table align="center">
+<tr>
+<td>Name</td>
+<td><input type="text" name="name" onblur="validateFirstName(this)"></td>
+<td><label id="firstname"></label></td>
+</tr>
+<tr>
+<td>Email</td>
+<td><input type="text" id="n3" name="email" ></td>
+<td><label id="email"></label></td>
+</tr>
+<tr>
+<td>Contact</td>
+<td><input type="text"  name="contact" onblur="validateContact(this)"></td>
+<td><label id="contact"></label></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type="password"  id="n4" name="password" onblur="validatePasswordRuleSet(this)"></td>
+<td><label id="password"></label></td>
+</tr>
+
+<tr>
+<td><input type="submit" name="submit" value="submit" align="center"></td>
+</tr>
+</table>
+</form>
+<center>
+<div class="n2">
+<p font-size= 20em;style="color:black"><mark>ALREADY HAVE AN ACCOUNT.PLEASE LOGIN</mark></p>
+
+<td><input type="button" name="submit" value="Log in" onclick="location.href='login.html'" class="button button1"></td>
+</div>
+</center>
+</body>
+</html>

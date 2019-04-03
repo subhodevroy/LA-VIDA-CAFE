@@ -1,0 +1,116 @@
+
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/firstrestaurant.css"></link>
+</head>
+<script type="text/javascript">
+
+function sum()
+{
+var cb,mb,ct,total;
+cb=parseInt(document.getElementById("n1").value);
+ct=parseInt(document.getElementById("n2").value);
+mb=parseInt(document.getElementById("n3").value);
+total=cb*180+ct*120+mb*200;
+return(total);
+document.write(total);
+}
+</script>
+<body>
+<form action="sunmiited.html" method="post">
+<body>
+
+	<center>
+		<div  id="logo">
+			<h1 style="color:orange;">La Vida Cafe</h1>
+		
+<a href="http://www.google.com"><img alt="image not found" src="image/lavidacafe.jpg"height="120px"width="200px"></a>
+		</div>
+		</center>
+		<div id="content">
+			<h2 align="center"><mark>Where taste meets the myth</mark></h2>
+			<p align="center">
+				Explore rated lists of top restaurants, cafes, pubs, and bars in and around Kolkata, based on trends 
+							</p>
+							<p align="center">We provide the best service because When you are here,you are Family</p>
+		
+		</div><br><br><br><br><br>
+		
+		<marquee behavior="alternate" direction="left"><img src="image/lavidacafe.jpg" width="200px" height="120px" alt="Natural" /> <img src="image/lavidacafe2.jpg" width="200px" height="120px" alt="Natural" /></marquee>
+<p><a href="http://www.google.com">click to choose your choice</a></p>
+
+<table>
+<tr>
+<td width="340" align="right"><font color="red">Name</font></td>
+<td width="10">&nbsp;</td>
+<td width="200"><input type="text" name="Name" size="30" tabindex="1"></td>
+</tr>
+<tr>
+<td width="340" align="right"><font color="red">Email</font> 
+<font color="yellow">(Your confirmation will be sent here): </font></td>
+<td width="10">&nbsp;</td>
+<td width="200"><input type="text" name="Email" size="30" tabindex="1" ></td>
+</tr>
+<tr>
+<td width="340" align="right"> <font color="yellow">Other Contact Info:</font></td>
+<td width="10">&nbsp;</td>
+<td width="200"><input type="text" name="OtherInfo" size="30" tabindex="1"></td>
+</tr>
+<tr>
+<td width="340" align="right">&nbsp;</td>
+<td width="10">&nbsp;</td>
+<td width="200">&nbsp;</td>
+</tr>
+</table>
+<p><font color="yellow">And tell us what you would like:</font></p>
+<p><font color="yellow">Please tell us who you are</font> (<font color="red">red</font> <font color="yellow">denotes required information):</font></p>
+<table border="0" cellpadding="0" width="550" font color="yellow" >
+<tr>
+<td width="250" height="31"><b><font color="yellow">Item Description</font></b></td>
+<td align="center" width="100" height="31"><b><font color="yellow">Quantity</font></b></td>
+<td align="right" height="31" width="60"><b><font color="yellow">Price</font> </b></td>
+
+</tr>
+<tr>
+<td width="250"><font color="yellow">chicken biriyani</font></td>
+<td align="center" width="100">
+<input type="text" name="cb" size="5" tabindex="5" id="n1"></td>
+<td align="right" width="60"><font color="yellow">180</font></td>
+</tr>
+<tr>
+<td width="250"><font color="yellow">chicken tikka</font></td>
+<td align="center" width="100">
+<input type="text" name="ct" size="5" tabindex="5" id="n2"></td>
+<td align="right" width="60"><font color="yellow">120</font></td>
+</tr>
+<tr>
+<td width="250"><font color="yellow">mutton biriyani</font></td>
+<td align="center" width="100">
+<input type="text" name="mb" size="5" tabindex="5" id="n3"></td>
+<td align="right" width="60"><font color="yellow">140</font></td>
+</tr>
+<tr>
+<td width="250">&nbsp;</td>
+<td align="center" width="100">&nbsp;</td>
+<td align="right" width="60">&nbsp;</td>
+<td align="right" width="140">&nbsp;</td>
+</tr>
+<tr>
+</table>
+<p id="n4"> <font color="yellow">WANT TO KNOW THE TOTAL?</font></p>
+<button type="button"
+onclick="document.getElementById('n4').innerHTML= sum()">TOTAL</button>
+<table border="0" cellpadding="0" width="550">
+<tr>
+<td width="563">
+<p align="center">
+<input type="submit" value="Submit" name="subButton" tabindex="50">&nbsp;&nbsp;&nbsp;&nbsp; 
+<input type="reset" value="Reset" name="resetButton" tabindex="50"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

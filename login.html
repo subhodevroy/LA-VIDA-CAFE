@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Login Page</title>
+<style>
+p{ line-height: 1em; }
+h1, h2, h3, h4{
+    color: black;
+	font-weight: normal;
+	line-height: 1.1em;
+	margin: 0 0 .5em 0;
+}
+h1{ font-size: 5em; }
+h2{ font-size: 1.5em; }
+a{
+	color: black;
+	text-decoration: none;
+}
+	a:hover,
+	a:active{ text-decoration: underline; }
+
+td
+{
+color:black;
+font-size:20px;
+font-style:italic;
+}
+table
+{
+border:2px solid;
+border-color:black;
+}
+
+body{
+background-color:cyan;
+background-image:url("lavidacafe3.jpg");
+ background-size: 2000px 1500px;
+    background-repeat: no-repeat;
+ font-family: arial; font-size: 80%; line-height: 1.2em; width: 100%; margin: 0; 
+}
+
+.n2
+{
+height:300px;
+width:500px;
+}
+#page{ margin: 20px; }
+#logo{
+	width: 35%;
+	margin-top: 5px;
+	font-family: georgia;
+	display: inline-block;
+}
+#nav{
+	width: 60%;
+	display: inline-block;
+	text-align: right;
+	float: right;
+}
+	#nav ul{}
+		#nav ul li{
+			display: inline-block;
+			height: 62px;
+		}
+			#nav ul li a{
+				padding: 20px;
+				background: orange;
+				color: white;
+			}
+			#nav ul li a:hover{
+				background-color: #ffb424;
+				box-shadow: 0px 1px 1px #666;
+			}
+			#nav ul li a:active{ background-color: #ff8f00; }
+
+#content{
+	margin: 30px 0;
+	background: white;
+	padding: 20px;
+	clear: both;
+}
+#footer{
+	border-bottom: 1px #ccc solid;
+	margin-bottom: 10px;
+}
+	#footer p{
+		text-align: right;
+		text-transform: uppercase;
+		font-size: 80%;
+		color: grey;
+	}
+#content,
+ul li a{ box-shadow: 0px 1px 1px #999; }
+</style>
+
+</head>
+<body>
+
+<h1 >Welcome to Login Page</h1>
+<form action="mainpage.html" method="post">
+<table align="center">
+<tr>
+<td>Username</td>
+<td><input type="text" name="username" placeholder="Enter your name"></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type="password" name="password" placeholder="Enter password"></td>
+</tr>
+<tr>
+<td><input type="submit" name="login" value="login"></td>
+</tr>
+</table>
+</form>
+
+</body>
+</html>
